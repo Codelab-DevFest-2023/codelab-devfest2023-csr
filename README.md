@@ -1,2 +1,3 @@
-# codelab-devfest2023
-Codelab sur les rendus front au DevFest 2023
+# Codelab DevFest 2023
+
+Projet pour le rendu côté client (CSR / Client Side Rendering)

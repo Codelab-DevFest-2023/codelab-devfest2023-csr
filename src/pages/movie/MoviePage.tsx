@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useGetMovieDetails } from '../../hooks/movie.hook';
+import { useMovie } from '../../hooks/movie.hook';
 import Like from '../../components/like/Like';
 import Note from '../../components/note/Note';
 
@@ -10,7 +10,7 @@ const MoviePage = () => {
     isFetching,
     isError,
     refetch,
-  } = useGetMovieDetails(Number(movieId));
+  } = useMovie(Number(movieId));
 
   const posterUrl = `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`;
   const backdropPathUrl = `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`;

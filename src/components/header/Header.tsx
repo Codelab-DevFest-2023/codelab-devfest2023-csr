@@ -11,6 +11,17 @@ const Header = () => {
           </span>
         </a>
 
+        <ul className="text-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          <li>
+            <a
+              href="/movies"
+              className="flex items-center gap-2 font-semibold leading-6 xl:text-lg text-base"
+            >
+              Les des films
+            </a>
+          </li>
+        </ul>
+
         <img
           className="lg:block hidden"
           src={popcornLogo}
@@ -24,4 +35,3 @@ const Header = () => {
 };
 
 export default Header;
-

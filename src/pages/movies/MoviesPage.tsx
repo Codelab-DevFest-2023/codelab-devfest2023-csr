@@ -1,9 +1,9 @@
 import MovieCard from '../../components/movie/card/MovieCard';
-import { useGetMovies } from '../../hooks/movie.hook';
+import { useMovies } from '../../hooks/movie.hook';
 import { Movie } from '../../interfaces/movie.interface';
 
 const MoviesPage = () => {
-  const { data: movies, isFetching, isError, refetch } = useGetMovies();
+  const { data: movies, isFetching, isError, refetch } = useMovies();
 
   return (
     <div className="lg:mx-44 mx-4 space-y-4 lg:pt-6 pt-14 pb-20">

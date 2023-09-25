@@ -3,14 +3,18 @@ import { AxiosError } from 'axios';
 import { Movie } from '../interfaces/movie.interface';
 import { getMovieDetails, getMovies } from '../services/movie.service';
 
-const useGetMovies = () => {
-  return useQuery<Movie[], AxiosError>(['MOVIES'], () => getMovies());
+const useMovies = () => {
+  return useQuery<Movie[], AxiosError>({
+    queryKey: ['MOVIES'],
+    queryFn: () => getMovies(),
+  });
 };
 
-const useGetMovieDetails = (movieId: number) => {
-  return useQuery<Movie, AxiosError>([`MOVIE-${movieId}`], () =>
-    getMovieDetails(movieId),
-  );
+const useMovie = (movieId: number) => {
+  return useQuery<Movie, AxiosError>({
+    queryKey: [`MOVIE-${movieId}`],
+    queryFn: () => getMovieDetails(movieId),
+  });
 };
 
-export { useGetMovieDetails, useGetMovies };
+export { useMovie, useMovies };

@@ -17,7 +17,7 @@ const Header = () => {
               href="/movies"
               className="flex items-center gap-2 font-semibold leading-6 xl:text-lg text-base"
             >
-              Les des films
+              Liste des films
             </a>
           </li>
         </ul>

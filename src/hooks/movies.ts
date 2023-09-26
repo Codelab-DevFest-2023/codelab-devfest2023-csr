@@ -5,14 +5,14 @@ import { getMovieDetails, getMovies } from '../services/movie.service';
 
 const useMovies = () => {
   return useQuery<Movie[], AxiosError>({
-    queryKey: ['MOVIES'],
+    queryKey: ['movies'],
     queryFn: () => getMovies(),
   });
 };
 
 const useMovie = (movieId: number) => {
   return useQuery<Movie, AxiosError>({
-    queryKey: [`MOVIE-${movieId}`],
+    queryKey: ['movies', movieId],
     queryFn: () => getMovieDetails(movieId),
   });
 };

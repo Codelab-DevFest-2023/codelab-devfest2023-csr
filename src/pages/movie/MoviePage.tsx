@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useMovie } from '../../hooks/movie.hook';
+import { useMovie } from '../../hooks/movies';
 import Like from '../../components/like/Like';
 import Note from '../../components/note/Note';
 
@@ -9,6 +9,7 @@ const MoviePage = () => {
     data: movie,
     isFetching,
     isError,
+    isFetched,
     refetch,
   } = useMovie(Number(movieId));
 
@@ -23,12 +24,12 @@ const MoviePage = () => {
             Erreur lors de la récupération du film ...
           </p>
           <button type="button" onClick={() => refetch()}>
-            Réssayer
+            Réessayer
           </button>
         </div>
       )}
       {isFetching && <p>Chargement...</p>}
-      {movie && (
+      {isFetched && movie && (
         <>
           <div className="poster z-10 md:order-first order-last">
             <img

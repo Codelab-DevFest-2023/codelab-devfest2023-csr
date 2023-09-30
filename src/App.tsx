@@ -11,7 +11,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="movies" element={<MoviesListPage />} />
-          <Route path="movie/:movieId" element={<MovieDetailsPage />} />
+          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

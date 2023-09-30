@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import MovieCard from '../../components/movie/card/MovieCard';
 import { useMovies } from '../../hooks/movies';
 
@@ -25,9 +26,9 @@ const MoviesListPage = () => {
         <ul className="movies-list grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
           {movies.map((movie) => (
             <li key={movie.id}>
-              <a href={`/movies/${movie.id}`}>
+              <Link to={`/movies/${movie.id}`}>
                 <MovieCard movie={movie} />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

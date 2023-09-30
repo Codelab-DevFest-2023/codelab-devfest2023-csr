@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import popcornLogo from '../../assets/popcorn.jpg';
 
 const Header = () => {
@@ -13,12 +14,12 @@ const Header = () => {
 
         <ul className="text-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           <li>
-            <a
-              href="/movies"
+            <Link
+              to="/movies"
               className="flex items-center gap-2 font-semibold leading-6 xl:text-lg text-base"
             >
               Liste des films
-            </a>
+            </Link>
           </li>
         </ul>
 

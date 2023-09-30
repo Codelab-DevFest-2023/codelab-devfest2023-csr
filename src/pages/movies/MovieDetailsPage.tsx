@@ -5,6 +5,7 @@ import Note from '../../components/note/Note';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
+
   const {
     data: movie,
     isFetching,

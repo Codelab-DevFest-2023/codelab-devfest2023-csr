@@ -4,10 +4,7 @@ import { Movie } from '../interfaces/movie.interface';
 import { getMovieDetails, getMovies } from '../services/movie.service';
 
 const useMovies = () => {
-  return useQuery<Movie[], AxiosError>({
-    queryKey: ['movies'],
-    queryFn: () => getMovies(),
-  });
+  return useQuery<Movie[], AxiosError>(['movies'], () => getMovies());
 };
 
 const useMovie = (movieId: number) => {

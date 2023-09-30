@@ -3,7 +3,7 @@ import { useMovie } from '../../hooks/movies';
 import Like from '../../components/like/Like';
 import Note from '../../components/note/Note';
 
-const MoviePage = () => {
+const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const {
     data: movie,
@@ -70,4 +70,4 @@ const MoviePage = () => {
   );
 };
 
-export default MoviePage;
+export default MovieDetailsPage;

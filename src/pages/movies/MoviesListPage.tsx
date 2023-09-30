@@ -1,7 +1,7 @@
 import MovieCard from '../../components/movie/card/MovieCard';
 import { useMovies } from '../../hooks/movies';
 
-const MoviesPage = () => {
+const MoviesListPage = () => {
   const { data: movies, isFetching, isError, isFetched, refetch } = useMovies();
   return (
     <div className="lg:mx-44 mx-4 space-y-4 lg:pt-6 pt-14 pb-20">
@@ -38,4 +38,4 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;
+export default MoviesListPage;

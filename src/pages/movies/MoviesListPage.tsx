@@ -21,12 +21,13 @@ const MoviesListPage = () => {
         </div>
       )}
       {isFetching && <p>Chargement...</p>}
-      {
-        isFetched && movies && movies?.length > 0 && (
+      {isFetched && movies && movies?.length > 0 && (
         <ul className="movies-list grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
           {movies.map((movie) => (
             <li key={movie.id}>
-              <MovieCard movie={movie} />
+              <a href={`/movies/${movie.id}`}>
+                <MovieCard movie={movie} />
+              </a>
             </li>
           ))}
         </ul>

@@ -1,10 +1,10 @@
-import { API_HEADER, DEFAULT_PARAMS, QUERY_PARAMS } from '../constants';
+import { API_HEADER } from '../constants';
 import axios, { AxiosResponse } from 'axios';
 import { Movie } from '../interfaces/movie.interface';
 
 const fetchPopularMovies = async (): Promise<Movie[]> => {
   const queryParams = new URLSearchParams();
-  queryParams.append(QUERY_PARAMS.LANGUAGE, DEFAULT_PARAMS.LANGUAGE);
+  queryParams.append('language', 'fr-FR');
 
   const URL = `${
     import.meta.env.VITE_API_URL
@@ -19,13 +19,12 @@ const fetchPopularMovies = async (): Promise<Movie[]> => {
 
 const fetchMovieDetails = async (movieId: number): Promise<Movie> => {
   const queryParams = new URLSearchParams();
-  queryParams.append(QUERY_PARAMS.LANGUAGE, DEFAULT_PARAMS.LANGUAGE);
+  queryParams.append('language', 'fr-FR');
 
   const URL = `${
     import.meta.env.VITE_API_URL
   }/movie/${movieId}?${queryParams.toString()}`;
 
-  console.log('url', URL);
   return axios
     .get(`${URL}`, {
       headers: API_HEADER,

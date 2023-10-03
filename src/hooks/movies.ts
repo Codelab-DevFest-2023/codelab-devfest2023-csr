@@ -1,19 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import { Movie } from '../interfaces/movie.interface';
-import { getMovieDetails, getMovies } from '../services/movie.service';
+import {
+  fetchMovieDetails,
+  fetchPopularMovies,
+} from '../services/movie.service';
 
 const useMovies = () => {
   return useQuery<Movie[], AxiosError>({
     queryKey: ['movies'],
-    queryFn: () => getMovies(),
+    queryFn: () => fetchPopularMovies(),
   });
 };
 
 const useMovie = (movieId: number) => {
   return useQuery<Movie, AxiosError>({
     queryKey: ['movies', movieId],
-    queryFn: () => getMovieDetails(movieId),
+    queryFn: () => fetchMovieDetails(movieId),
   });
 };
 

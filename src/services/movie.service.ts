@@ -2,7 +2,7 @@ import { API_HEADER, DEFAULT_PARAMS, QUERY_PARAMS } from '../constants';
 import axios, { AxiosResponse } from 'axios';
 import { Movie } from '../interfaces/movie.interface';
 
-const getMovies = async (): Promise<Movie[]> => {
+const fetchPopularMovies = async (): Promise<Movie[]> => {
   const queryParams = new URLSearchParams();
   queryParams.append(QUERY_PARAMS.LANGUAGE, DEFAULT_PARAMS.LANGUAGE);
 
@@ -17,7 +17,7 @@ const getMovies = async (): Promise<Movie[]> => {
     .then((response: AxiosResponse) => response.data.results);
 };
 
-const getMovieDetails = async (movieId: number): Promise<Movie> => {
+const fetchMovieDetails = async (movieId: number): Promise<Movie> => {
   const queryParams = new URLSearchParams();
   queryParams.append(QUERY_PARAMS.LANGUAGE, DEFAULT_PARAMS.LANGUAGE);
 
@@ -33,4 +33,4 @@ const getMovieDetails = async (movieId: number): Promise<Movie> => {
     .then((response: AxiosResponse) => response.data);
 };
 
-export { getMovieDetails, getMovies };
+export { fetchMovieDetails, fetchPopularMovies };

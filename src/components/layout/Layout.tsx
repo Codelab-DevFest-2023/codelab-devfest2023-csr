@@ -9,9 +9,9 @@ const Layout = () => {
   }, []);
 
   return (
-    <div className="bg-gray-light">
+    <div className="bg-gray-light h-screen">
       <Header />
-      <div className="sm:mt-20 mt-28 mb-10">
+      <div className="sm:pt-20 pt-28 pb-12 h-full">
         <Outlet />
       </div>
       <Footer />

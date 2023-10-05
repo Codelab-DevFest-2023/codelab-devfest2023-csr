@@ -3,8 +3,12 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'film-strip': "url('/images/film-strip.svg')",
+      },
       colors: {
-        primary: '#10063e',
+        primary: '#D14F34',
+        secondary: '#0E1324',
         yellow: '#ffe733',
         red: '#ed2938',
         green: '#006b3e',
@@ -17,4 +21,3 @@ export default {
   },
   plugins: [],
 };
-

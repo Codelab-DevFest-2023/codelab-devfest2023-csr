@@ -1,5 +1,5 @@
 const MovieDetailsPage = () => {
-  return <div className="flex md:flex-row flex-col"></div>;
+  return <div className="details-page"></div>;
 };
 
 export default MovieDetailsPage;

@@ -46,7 +46,7 @@
   }
 
   .movie-backdrop {
-    @apply block z-0 object-cover brightness-50;
+    @apply absolute z-0 object-cover h-full w-[inherit] brightness-50;
   }
 
   .informations {

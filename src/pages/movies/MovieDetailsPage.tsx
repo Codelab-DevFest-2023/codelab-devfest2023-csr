@@ -18,7 +18,7 @@ const MovieDetailsPage = () => {
   const backdropPathUrl = `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`;
 
   return (
-    <div className="flex md:flex-row flex-col">
+    <div className="details-page">
       {isError && (
         <div>
           <p className="text-red mb-4">
@@ -32,33 +32,33 @@ const MovieDetailsPage = () => {
       {isFetching && <p>Chargement...</p>}
       {isFetched && movie && (
         <>
-          <div className="poster z-10 md:order-first order-last">
+          <div className="poster">
             <img
               src={posterUrl}
               alt={movie.title}
-              className="aspect-[2/3] object-cover h-full"
+              className="poster-image"
               height={750}
               width={500}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="description relative w-full">
+          <div className="relative-full">
             <img
-              className="absolute z-0 object-cover h-full w-[inherit] brightness-50"
+              className="movie-backdrop"
               alt={movie.title}
               src={backdropPathUrl}
             />
-            <div className="relative flex flex-col">
-              <div className="flex flex-col gap-3 ml-4 text-white mt-3">
-                <h1 className="text-xl font-semibold">{movie.title}</h1>
-                <div className="flex gap-2">
+            <div className="movie-description">
+              <div className="informations">
+                <h1 className="movie-title">{movie.title}</h1>
+                <div className="movie-genre">
                   {movie.genres.map((genre) => {
                     return <p key={genre.id}>{genre.name}</p>;
                   })}
                 </div>
                 <p>{movie.tagline}</p>
-                <p className="mt-2 mr-10">{movie.overview}</p>
-                <div className="flex items-center gap-3">
+                <p className="movie-overview">{movie.overview}</p>
+                <div className="movie-note">
                   <Note note={movie.vote_average} />
                   <Like id={movie.id} />
                 </div>

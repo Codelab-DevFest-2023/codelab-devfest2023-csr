@@ -1,27 +1,30 @@
-# React + TypeScript + Vite
+# codelab-devfest2023-csr
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Codelab sur les rendus front au DevFest 2023 (React & Vite)
 
-Currently, two official plugins are available:
+## Configuration initiale
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Installation des dépendances**
 
-## Expanding the ESLint configuration
+   Assurez-vous d'avoir Node.js installé. Ensuite, installez les dépendances en utilisant npm (Node Package Manager) :
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```bash
+   npm install
 
-- Configure the top-level `parserOptions` property like this:
+   ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. **Démarrage de l'application**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   Pour lancer l'application en mode de développement, exécutez les commandes suivantes :
+
+   ```bash
+   npm run dev
+   ```
+
+L'application sera accessible à l'adresse http://localhost:5173.
+
+3. **Gestion de l'API**
+
+Nous allons utiliser l'api The Movie Database
+
+Accesible à l'adresse suivante : https://developer.themoviedb.org/reference/intro/getting-started

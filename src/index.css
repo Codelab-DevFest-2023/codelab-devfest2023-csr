@@ -72,4 +72,16 @@
   .movie-poster {
     @apply rounded-t-lg aspect-[2/3] object-cover;
   }
+
+  .header-item {
+    @apply text-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4;
+  }
+
+  .header-link {
+    @apply flex items-center gap-2 font-semibold leading-6 xl:text-lg text-base;
+  }
+
+  .header-title {
+    @apply hidden sm:block text-white font-semibold leading-6 xl:text-lg text-base;
+  }
 }

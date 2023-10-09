@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { useMovie } from '../../hooks/movies';
-import Like from '../../components/like/Like';
 import Note from '../../components/note/Note';
 
 const MovieDetailsPage = () => {
@@ -60,7 +59,6 @@ const MovieDetailsPage = () => {
                 <p className="movie-overview">{movie.overview}</p>
                 <div className="movie-note">
                   <Note note={movie.vote_average} />
-                  <Like id={movie.id} />
                 </div>
               </div>
             </div>
